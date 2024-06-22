@@ -1,0 +1,37 @@
+.custom-card {
+    border: 1px solid #ccc; /* Outer border color */
+    background-color: #f7f7f7; /* Background color */
+    width: 100%;
+    max-width: 600px; /* Adjust max-width as per your design */
+    padding: 20px;
+  }
+  
+  .form-border {
+    border: 1px solid #ddd; /* Inner form border color */
+    padding: 20px;
+  }
+  
+  .container-fluid {
+    height: 100vh; /* Adjust height if needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; /* Background color of outer container */
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  
+  .w-100 {
+    width: 100%;
+  }
+  
+  /* Adjustments for small screens */
+  @media (max-width: 768px) {
+    .custom-card {
+      max-width: 100%;
+      margin: 10px;
+    }
+  }
+  

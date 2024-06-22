@@ -1,0 +1,89 @@
+<footer id="footer">
+    <div class="container">
+      <span>Subscribe to see secret deals price<br>drop the moment you sign up!</span>
+      <div class="search">
+        <input type="text" placeholder="Search..." />
+      </div>
+      <div class="subscription">
+        <button mat-stroked-button type="button">Subscribe</button>
+      </div>
+    </div>
+    <hr>
+    <div class="links-container">
+      <div class="contact-us">
+        <img src="aassets/car.png.gif" alt="  Travel Bus" />
+        <span class="bus-name">Travila</span>
+        <div>
+          <button mat-icon-button color="primary">
+            <mat-icon>location_on</mat-icon>
+          </button>
+          <span>452 15th Street, Office 741, Ohio, DE 47754, USA</span>
+        </div>
+        <!-- <span>
+          <mat-icon style="color: blue;">schedule</mat-icon>
+          {{ currentDay }}, {{ currentTime }}
+        </span> -->
+        <div>
+          <button mat-icon-button color="primary">
+            <mat-icon>email</mat-icon>
+          </button>
+          <span>support@travila.com</span>
+        </div>
+        <div>
+          <button mat-icon-button color="primary">
+            <mat-icon>phone</mat-icon>
+          </button>
+          <span>Need Help? Call us</span>
+        </div>
+      </div>
+      <div class="links">
+        <p>Support</p>
+        <ul>
+          <li><a href="#">Forum support</a></li>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Live Chat</a></li>
+        </ul>
+      </div>
+      <div class="links">
+        <p>Company</p>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Community Blog</a></li>
+          <li><a href="#">Job and Careers</a></li>
+        </ul>
+      </div>
+      <div class="links">
+        <p>Services</p>
+        <ul>
+          <li><a href="#">Tour Guides</a></li>
+          <li><a href="#">Tour Booking</a></li>
+          <li><a href="#">Hotel Booking</a></li>
+        </ul>
+      </div>
+      <div class="links">
+        <p>Legal</p>
+        <ul>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Cooking Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+    <div class="copyright">
+      <!-- <p>© {{ currentYear }} Travila Inc. All rights reserved.</p> -->
+      <p>copyrights © {{currentDate}} {{currentMonth}}  {{ currentYear }}  {{ currentDay }}, {{ currentTime }} Travila Inc. All rights reserved.</p>
+      <p>Follow us</p>
+      <!-- <button mat-icon-button (click)="scrollToTop()">
+        <mat-icon>arrow_upward</mat-icon>
+      </button> -->
+
+      <button mat-icon-button (click)="scrollToTop()" #scrollToTopButton>
+        <mat-icon>arrow_upward</mat-icon>
+      </button>
+      <div #elementRef></div>
+
+
+    </div>
+  </footer>
+  

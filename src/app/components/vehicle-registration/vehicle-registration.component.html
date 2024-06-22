@@ -1,0 +1,97 @@
+<div class="container-fluid">
+  <mat-card class="card-shadow p-0">
+    <h2 class="p-3">Vehicle Registration</h2>
+    <div class="row">
+      <form [formGroup]="vehicleRegForm" autocomplete="off" class="form-border">
+        <div class="row mt-0 p-3">
+
+          <!-- Vehicle Name -->
+          <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-1">
+            <mat-form-field class="example-full-width w-100">
+              <mat-label>Vehicle Name</mat-label>
+              <input matInput type="text" placeholder="Vehicle Name" formControlName="vehicleName">
+            </mat-form-field>
+          </div>
+
+          <!-- Vehicle Type -->
+          <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-1">
+            <mat-form-field class="example-full-width w-100">
+              <mat-label>Vehicle Type</mat-label>
+              <input matInput type="text" placeholder="Vehicle Type" formControlName="vehicleType">
+            </mat-form-field>
+          </div>
+
+          <!-- Vehicle Seat No. -->
+          <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-1">
+            <mat-form-field class="example-full-width w-100">
+              <mat-label>Vehicle Seat No.</mat-label>
+              <input matInput type="text" placeholder="Vehicle Seat No." formControlName="vehicleSeatNo">
+            </mat-form-field>
+          </div>
+
+          <!-- Stop (Dropdown) -->
+          <div class="col-lg-4 mt-1">
+            <mat-form-field class="example-full-width w-100">
+              <mat-label>Stop</mat-label>
+              <mat-select formControlName="stop">
+                <mat-option value="">--Select--</mat-option>
+                <mat-option *ngFor="let st of stops" [value]="st">{{ st }}</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+
+          <!-- From -->
+          <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-1">
+            <mat-form-field class="example-full-width w-100">
+              <mat-label>From</mat-label>
+              <input matInput type="text" placeholder="From" formControlName="from">
+            </mat-form-field>
+          </div>
+
+          <!-- To -->
+          <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-1">
+            <mat-form-field class="example-full-width w-100">
+              <mat-label>To</mat-label>
+              <input matInput type="text" placeholder="To" formControlName="to">
+            </mat-form-field>
+          </div>
+
+          <!-- Contact -->
+          <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-1">
+            <mat-form-field class="example-full-width w-100">
+              <mat-label>Contact</mat-label>
+              <input matInput type="text" placeholder="Contact" formControlName="contact">
+            </mat-form-field>
+          </div>
+          <!-- Email -->
+          <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-1">
+            <mat-form-field class="example-full-width w-100">
+              <mat-label>Email</mat-label>
+              <input matInput type="email" placeholder="Email" formControlName="email">
+            </mat-form-field>
+          </div>
+
+          <!-- Date (Datepicker) -->
+          <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-1">
+            <mat-form-field class="example-full-width w-100">
+              <mat-label>Date</mat-label>
+              <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="date">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="col-12 mt-3">
+            <div class="d-flex justify-content-end">
+              <button mat-raised-button color="primary" (click)="submit()">SUBMIT</button>
+              <!-- Uncomment below if you need an UPDATE button -->
+              <!-- <button mat-raised-button color="primary" *ngIf="disableButton" (click)="update()">UPDATE</button> -->
+            </div>
+          </div>
+
+        </div>
+      </form>
+    </div>
+  </mat-card>
+</div>
